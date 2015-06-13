@@ -82,7 +82,7 @@ tar -xzf $CACHE_DIR/env.tar.gz -C $BUILD_DIR
 title "Build dir is $BUILD_DIR"
 if [ -f $BUILD_DIR/requirements.txt ]; then
 	title "Found requirements.txt, installing dependencies using pip"
-	$BUILD_DIR/.heroku/vendor/bin/pip install -r requirements.txt --root=$HOME --exists-action=w --src=./.heroku/src --allow-all-external
+	$BUILD_DIR/.heroku/python/bin/pip install -r requirements.txt
 fi
 
 # creating env variables
