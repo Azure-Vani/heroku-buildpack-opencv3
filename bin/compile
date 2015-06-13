@@ -90,7 +90,7 @@ title "Creating environment variables."
 mkdir -p $BUILD_DIR/.profile.d
 cat <<EOF >$BUILD_DIR/.profile.d/5251124.sh
 export LD_LIBRARY_PATH="\$HOME/.heroku/python/lib:\$HOME/.heroku/vendor/lib/:\$HOME/.heroku/vendor/lib/:\$LD_LIBRARY_PATH"
-export PATH="\$HOME/.heroku/python/lib:\$HOME/usr/local/bin:\$HOME/.heroku/vendor/bin:\$PATH"
+export PATH="\$HOME/usr/local/bin:\$HOME/.heroku/vendor/bin:\$PATH"
 export PYTHONPATH="\$HOME/.heroku/python/lib/python2.7/site-packages"
 EOF
 # export "\$LIBRARY_PATH=\$HOME/.heroku/vendor/lib/:\$LIBRARY_PATH"
