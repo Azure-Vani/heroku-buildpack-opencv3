@@ -91,9 +91,7 @@ EOF
 title "Build dir is $BUILD_DIR"
 if [ -f $BUILD_DIR/requirements.txt ]; then
 	title "Found requirements.txt, installing dependencies using pip"
-    export LD_LIBRARY_PATH="\$HOME/.heroku/python/lib:\$HOME/.heroku/vendor/lib/:\$HOME/.heroku/vendor/lib/:\$LD_LIBRARY_PATH"
-    title $LD_LIBRARY_PATH
-	$BUILD_DIR/.heroku/python/bin/pip install -r requirements.txt
+    LD_LIBRARY_PATH="\$HOME/.heroku/python/lib:\$HOME/.heroku/vendor/lib/:\$HOME/.heroku/vendor/lib/:\$LD_LIBRARY_PATH" bash -c "$BUILD_DIR/.heroku/python/bin/pip install -r requirements.txt"
 fi
 
 # export "\$LIBRARY_PATH=\$HOME/.heroku/vendor/lib/:\$LIBRARY_PATH"
